@@ -1,0 +1,14 @@
+{
+  "name": "purpleschool-learning-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Учебный режим PurpleSchool для OpenCode: агент student и 4 скилла",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "node scripts/check.ts && node scripts/build-catalog.ts --check",
+    "build": "node scripts/build-catalog.ts"
+  }
+}

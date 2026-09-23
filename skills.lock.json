@@ -1,0 +1,18 @@
+{
+  "code-review": {
+    "version": 1,
+    "hash": "9fa245c3045abd38468eaa70f8a9b0cad7091c2c3e24080cc85cfc9a32454e2a"
+  },
+  "debug-coach": {
+    "version": 1,
+    "hash": "24d2aa435c9593f2daf0e93a69893d139da172417d1e300dd256ee84da079c74"
+  },
+  "explain-code": {
+    "version": 1,
+    "hash": "dc5cfd1bcc5fc1f6cbce0c478cf131b887b7ea971b96aff112c8bc9a7e51454d"
+  },
+  "hint-ladder": {
+    "version": 1,
+    "hash": "8eae68a78dd0e211d1b1f0ff92bceaf25b168db4baffdce6f1e8afdcd236735c"
+  }
+}
