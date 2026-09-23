@@ -291,7 +291,7 @@ function Invoke-Install {
     Write-Host '  1. Откройте OpenCode в папке своего проекта: opencode'
     if ($Default) { Write-Host '  2. Агент student включится сам (он по умолчанию); Shift+Tab переключает агентов (в V1 — Tab).' }
     else { Write-Host '  2. Нажмите Shift+Tab (в V1 — Tab) — в списке агентов появится student.' }
-    Write-Host '  3. Наберите / — в списке команд будут hint-ladder, code-review, debug-coach, explain-code.'
+    Write-Host '  3. Нажмите ctrl+p → Skills — в списке будут hint-ladder, code-review, debug-coach, explain-code (в V1 — через /).'
     if ($version -eq 2) {
         # OpenCode V2 держит фоновый сервис, который не замечает новые скиллы и агентов до перезапуска.
         Write-Host ''

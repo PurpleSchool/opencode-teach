@@ -320,7 +320,7 @@ install() {
   else
     echo "  2. Нажмите Shift+Tab (в V1 — Tab) — в списке агентов появится student."
   fi
-  echo "  3. Наберите / — в списке команд будут hint-ladder, code-review, debug-coach, explain-code."
+  echo "  3. Нажмите ctrl+p → Skills — в списке будут hint-ladder, code-review, debug-coach, explain-code (в V1 — через /)."
   service_hint
   if [ "$MODE" = link ]; then
     echo "Обновление: git pull в $REPO — переустанавливать не нужно."

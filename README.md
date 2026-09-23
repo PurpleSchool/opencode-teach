@@ -69,7 +69,7 @@ cd opencode-teach
 1. Если OpenCode V2 уже был запущен, перезапустите фоновый сервис: `opencode service restart`. Он индексирует скиллы и агентов при старте и не замечает новые (`opencode reload` не помогает).
 2. Откройте OpenCode в папке своего проекта: `opencode`.
 3. Нажмите Shift+Tab (в V1 — Tab) — в списке агентов есть `student`.
-4. Наберите `/` — в списке команд есть `hint-ladder`, `code-review`, `debug-coach`, `explain-code`.
+4. Нажмите `ctrl+p` → **Skills** — в списке есть `hint-ladder`, `code-review`, `debug-coach`, `explain-code`. В OpenCode 2.0.15 скиллов нет в меню `/`, хотя документация V2 обещает их там; в V1 — через `/`.
 5. Напишите «я застрял» — агент загрузит `hint-ladder` и даст первую подсказку без кода.
 
 ### Обновление
