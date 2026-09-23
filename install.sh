@@ -204,6 +204,14 @@ detect_version() {
   ok "OpenCode $raw → формат V$OC_VERSION"
 }
 
+# OpenCode V2 держит фоновый сервис, который не замечает новые скиллы и агентов до перезапуска.
+service_hint() {
+  [ "$OC_VERSION" = 2 ] || return 0
+  echo
+  echo "Если OpenCode уже был запущен, перезапустите его фоновый сервис, иначе агент и скиллы не появятся:"
+  echo "  opencode service restart"
+}
+
 NEW_MANIFEST=""
 BACKUP_DIR=""
 
@@ -308,11 +316,12 @@ install() {
   echo "Готово. Как проверить:"
   echo "  1. Откройте OpenCode в папке своего проекта: opencode"
   if [ "$SET_DEFAULT" = 1 ]; then
-    echo "  2. Агент student включится сам (он по умолчанию); Tab переключает агентов."
+    echo "  2. Агент student включится сам (он по умолчанию); Shift+Tab переключает агентов (в V1 — Tab)."
   else
-    echo "  2. Нажмите Tab — в списке агентов появится student."
+    echo "  2. Нажмите Shift+Tab (в V1 — Tab) — в списке агентов появится student."
   fi
   echo "  3. Наберите / — в списке команд будут hint-ladder, code-review, debug-coach, explain-code."
+  service_hint
   if [ "$MODE" = link ]; then
     echo "Обновление: git pull в $REPO — переустанавливать не нужно."
   else
